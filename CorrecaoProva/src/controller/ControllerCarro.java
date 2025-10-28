@@ -12,6 +12,11 @@ public class ControllerCarro {
 
 	private ArrayList<Carro> Lcarros = new ArrayList<>();
 	private final String ARQUIVO = "carros";
+	
+	public ControllerCarro() {
+		carregarArquivo();
+		
+	}
 
 	public void inserirCarro(Carro carros) {
 		Lcarros.add(carros);
