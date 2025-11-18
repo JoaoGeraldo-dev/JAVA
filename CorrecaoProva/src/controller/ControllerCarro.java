@@ -2,6 +2,7 @@ package controller;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,18 +15,16 @@ public class ControllerCarro {
 	private final String ARQUIVO = "carros";
 	
 	public ControllerCarro() {
-		carregarArquivo();
+		carregarArquivo();	
 	}
 	
-	public void inserirCarro(Carro carros) { // CREATE
+	public void inserirCarro(Carro carros) {
 		Lcarros.add(carros);
 		salvarArquivo();
 	}
-	
-	public ArrayList<Carro> listar() { // READE
+	public ArrayList<Carro> listar() {
 		return Lcarros;
 	}
-	
 	public void removerCarro(String modelo) {
 		int i = Buscar(modelo);
 		if (i >= 0) {
@@ -33,7 +32,7 @@ public class ControllerCarro {
 		}
 		salvarArquivo();
 	}
-	public void alterarCarro(String modelo, Carro carro) { //DELETE
+	public void alterarCarro(String modelo, Carro carro) {
 		int i = Buscar(modelo);
 		if (i >= 0) {
 			Lcarros.set(i, carro);
@@ -51,15 +50,14 @@ public class ControllerCarro {
 		return -1;
 	}
 
-	private void carregarArquivo() {
+	private void carregarArquivo(){
 		File arquivo = new File(ARQUIVO);
 		
-		if(!arquivo.exists()) return;		
-		
-		
+		if(!arquivo.exists()) return;	
 		
 		String linha;
-		try (BufferedReader br = new BufferedReader(new FileReader(ARQUIVO))){		
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(ARQUIVO))){
 			while( (linha = br.readLine()) != null) {
 				Lcarros.add(Carro.fromCSV(linha));
 			}
@@ -68,26 +66,16 @@ public class ControllerCarro {
 		}
 	}
 	
-	private void salvarArquivo() {		
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(ARQUIVO));){
-			
-			for(Carro c: Lcarros) {
+	private void salvarArquivo() {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(ARQUIVO))){
+			for (Carro c : Lcarros) {
 				bw.write(c.toCSV());
 				bw.newLine();
-			
-			}			
+			}
 		} catch (IOException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
+		}
 	}
 }
  
-
-
-
-
-
-
-
-

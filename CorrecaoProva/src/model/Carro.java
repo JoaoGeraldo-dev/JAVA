@@ -46,7 +46,7 @@ public class Carro {
 	}
 	
 	public String toCSV() {
-		return modelo + ";" + marca + ";" + ano + ";" + preco;
+		return modelo + ";" + marca + ";" + ano + ";" + preco; 
 	}
 	
 	@Override

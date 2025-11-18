@@ -23,31 +23,25 @@ public class TesteCarro {
 				String marca = JOptionPane.showInputDialog("marca do carro");
 				double preco = Double.parseDouble(JOptionPane.showInputDialog("Preço Carro:"));
 				int ano = Integer.parseInt(JOptionPane.showInputDialog("Ano do Carro:"));
-				
 				Carro novoCarro = new Carro(modelo, marca, ano, preco);
-				
 				Lcarros.inserirCarro(novoCarro);
-				
 				break;
 				
-			case 2:
-				String modeloRemover = JOptionPane.showInputDialog("Modelo para remoção");
-				
+			case 2: 
+				String modeloRemover = JOptionPane.showInputDialog("Modelo para remover:");
 				Lcarros.removerCarro(modeloRemover);
 				
 				break;
-				
 			case 4:
 				StringBuilder sb = new StringBuilder("Lista de carros\n\n");
 				
-				for(Carro c: Lcarros.listar()) {
-					
+				for (Carro c: Lcarros.listar()) {
 					sb.append(c).append("\n");
 				}
-
-                JOptionPane.showMessageDialog(null, "<html><pre>" + sb + "</pre></html>");
-            break;
 				
+				JOptionPane.showMessageDialog(null, "<html><pre>" + sb +"</pre></html>");
+				//JOptionPane.showMessageDialog(null, sb.length() >0 ? sb.toString() : "Nenhum carro cadastrado");
+				break;
 			}
 		} while (opcao != 5);
 	}
