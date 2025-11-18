@@ -17,16 +17,12 @@ public class ControllerCarro {
 		carregarArquivo();
 	}
 	
-	public void inserirCarro(Carro carros) {
-		System.out.println(" size  " + Lcarros.size());
+	public void inserirCarro(Carro carros) { // CREATE
 		Lcarros.add(carros);
-		for(Carro c: Lcarros) {
-			System.out.println("**** " + c.toString());
-		}
 		salvarArquivo();
 	}
 	
-	public ArrayList<Carro> listar() {
+	public ArrayList<Carro> listar() { // READE
 		return Lcarros;
 	}
 	
@@ -35,12 +31,14 @@ public class ControllerCarro {
 		if (i >= 0) {
 			Lcarros.remove(i);
 		}
+		salvarArquivo();
 	}
-	public void alterarCarro(String modelo, Carro carro) {
+	public void alterarCarro(String modelo, Carro carro) { //DELETE
 		int i = Buscar(modelo);
 		if (i >= 0) {
 			Lcarros.set(i, carro);
 		}
+		salvarArquivo();
 	}
 	public int Buscar(String modelo) {
 		int i = 0;
@@ -58,11 +56,10 @@ public class ControllerCarro {
 		
 		if(!arquivo.exists()) return;		
 		
-		BufferedReader br;
+		
 		
 		String linha;
-		try {
-			br = new BufferedReader(new FileReader(ARQUIVO));			
+		try (BufferedReader br = new BufferedReader(new FileReader(ARQUIVO))){		
 			while( (linha = br.readLine()) != null) {
 				Lcarros.add(Carro.fromCSV(linha));
 			}
@@ -72,15 +69,15 @@ public class ControllerCarro {
 	}
 	
 	private void salvarArquivo() {		
-		try {
-			BufferedWriter bw = new BufferedWriter(new FileWriter(ARQUIVO));
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(ARQUIVO));){
+			
 			for(Carro c: Lcarros) {
 				bw.write(c.toCSV());
 				bw.newLine();
-				System.out.println(c.toString());
+			
 			}			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}		
 	}
