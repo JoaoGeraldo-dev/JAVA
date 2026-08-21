@@ -23,4 +23,9 @@ public class UsuarioService {
     public void deletar(Long id) {
         usuarioRepository.deleteById(id);
     }
+
+    public List<Usuario> buscarPorNome(String nome)
+    { return usuarioRepository.findByNome(nome); }
+
+
 }
