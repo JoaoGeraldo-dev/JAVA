@@ -19,11 +19,6 @@ public class UsuarioController {
         return usuarioService.listarTodos();
     }
 
-    @GetMapping("/buscar")
-    public List<Usuario> buscarPorNome(@RequestParam String nome) {
-        return usuarioService.buscarPorNome(nome);
-    }
-
     @PostMapping
     public Usuario criar(@RequestBody Usuario usuario) {
         return usuarioService.salvar(usuario);
@@ -32,5 +27,10 @@ public class UsuarioController {
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id) {
         usuarioService.deletar(id);
+    }
+
+    @GetMapping("/buscar")
+    public List<Usuario> buscarPorNome(@RequestParam String nome) {
+        return usuarioService.buscaPorNome(nome);
     }
 }

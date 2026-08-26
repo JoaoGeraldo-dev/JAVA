@@ -1,8 +1,10 @@
 package com.fatec.exemplo.apiusuarios.repository;
 
-import com.fatec.exemplo.apiusuarios.model.Cliente;
 import com.fatec.exemplo.apiusuarios.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ClienteRepository extends JpaRepository<Cliente,Long> {
+import java.util.List;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+    List<Usuario> findByNome(String nome);
 }
