@@ -12,7 +12,9 @@ public class MicroEx {
     private int assentosDisponiveis = 10;
     private double saldo3 = 150;
     private int idadeMinima = 18;
-
+    private int estoque = 20;
+    private int estoqueMinimo = 5;
+    private double preco2 = 200;
     public void aumentarTemperatura(int valor){
         if(valor <= 0){
             System.out.println("valor invalido");
@@ -94,6 +96,27 @@ public class MicroEx {
         } else{
             System.out.println("Compra de ingresso aprovada!");
             saldo3 -= preco;
+        }
+    }
+
+    public void retirarEstoque(int quantidade){
+        if(quantidade < 0 || quantidade > estoque){
+            System.out.println("Erro generico que poderiamos explicar usando if");
+        }else{
+            System.out.println("Deu certo");
+            estoque -= quantidade;
+        }
+        if (estoque < estoqueMinimo){
+            System.out.println("o estoque esta abaixo do minino, favor repor.");
+        }
+    }
+
+    public void aplicarDesconto(double percentual){
+        if(percentual <= 0 || percentual > 50){
+            System.out.println("o percentual precisa ser maior que 0 e menor que 50%");
+        }else{
+            preco2 -= (preco2 * percentual)/100;
+            System.out.println("desconto aplicado");
         }
     }
 
