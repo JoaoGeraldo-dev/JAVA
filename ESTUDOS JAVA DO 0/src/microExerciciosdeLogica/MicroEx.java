@@ -88,7 +88,14 @@ public class MicroEx {
         }
     }
 
-    
+    public void comprarIngresso(double preco, int idadePessoa){
+        if (preco <= 0 || idadePessoa < idadeMinima || preco > saldo3){
+            System.out.println("alguma das sua credencias nao batem no sistema. FALHA.");
+        } else{
+            System.out.println("Compra de ingresso aprovada!");
+            saldo3 -= preco;
+        }
+    }
 
 
 
