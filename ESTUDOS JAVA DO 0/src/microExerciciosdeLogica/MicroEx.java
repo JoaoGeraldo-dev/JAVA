@@ -7,6 +7,9 @@ public class MicroEx {
     private int idade = 18;
     private boolean ingresso = true;
     private int velocidade;
+    private double saldo2 = 1000;
+    private double  limiteDiario = 500;
+    private
 
     public void aumentarTemperatura(int valor){
         if(valor <= 0){
@@ -59,5 +62,20 @@ public class MicroEx {
             System.out.println("velocidade muito alta VRUMMMMMMMMMMMMMMMMMMMM");
         }
     }
+
+
+    public void sacar(double valor){
+        if(valor <= 0){
+            System.out.println("valor invalido!!");
+        }else if(valor > limiteDiario || valor > saldo2){
+            System.out.println("o valor ultrapassa seu limite diario ou nao tem saldo suficiente");
+        }else{
+            System.out.println("saque feito com sucesso");
+            saldo2 = saldo2 - valor;
+        }
+
+    }
+
+
 
 }
