@@ -9,7 +9,9 @@ public class MicroEx {
     private int velocidade;
     private double saldo2 = 1000;
     private double  limiteDiario = 500;
-    private
+    private int assentosDisponiveis = 10;
+    private double saldo3 = 150;
+    private int idadeMinima = 18;
 
     public void aumentarTemperatura(int valor){
         if(valor <= 0){
@@ -75,6 +77,18 @@ public class MicroEx {
         }
 
     }
+
+    public void reservar(int quantidade){
+        if(quantidade < 0){
+            System.out.println("A quantidade precisa ser maior que zero");
+        }else if(quantidade > assentosDisponiveis){
+            System.out.println("voce nao pode reservar um numero maior doq o de acentos disponiveis");
+        }else{
+            assentosDisponiveis -= quantidade;
+        }
+    }
+
+    
 
 
 
