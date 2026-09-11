@@ -40,4 +40,5 @@ public class UsuarioController {
     public List<Usuario> buscarPorNomeUsuarioContendo(@RequestParam String nome) {
         return service.contendoPorNomeUsuario(nome);
     }
+
     }

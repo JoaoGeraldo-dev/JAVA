@@ -41,3 +41,9 @@ import java.util.List;
         }
     }
 
+<<<<<<< HEAD:EstudoSpring-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/service/UsuarioService.java
+=======
+
+
+
+>>>>>>> 59ed8124a7d095b5c63d39c68e727d9b51ec510f:Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/service/Usuarioservice.java

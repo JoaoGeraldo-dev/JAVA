@@ -14,7 +14,7 @@ import java.util.List;
 public class WebClienteController {
 
     @Autowired
-    private ClienteService clienteservice;
+    private ClienteService clienteService;
 
     @GetMapping("/novo")
     public String mostrarFormulario(Model model) {
@@ -24,11 +24,12 @@ public class WebClienteController {
 
     @PostMapping("/salvar")
     public String salvar(@ModelAttribute Cliente cliente) {
-        clienteservice.salvar(cliente);
+        clienteService.salvar(cliente);
         return "cadastro_cliente";
     }
 
     @GetMapping("/lista")
+<<<<<<< HEAD:EstudoSpring-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebClienteController.java
     public String listar(@RequestParam(required = false) String nome, Model model) {
         List<Cliente> clientes = (nome == null || nome.isEmpty())
                 ? clienteservice.listarTodos()
@@ -38,3 +39,13 @@ public class WebClienteController {
         return "lista_cliente";
     }
 }
+=======
+    public  String Listar(@RequestParam(required = false) String nome, Model model) {
+        List<Cliente> clientes = (nome == null || nome.isEmpty())
+                ? clienteService.ListarClientes()
+                : clienteService.contendoPorNomeCliente(nome);
+        model.addAttribute("clientes: ", clientes);
+        return "lista";
+    }
+}
+>>>>>>> 59ed8124a7d095b5c63d39c68e727d9b51ec510f:Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebClienteController.java

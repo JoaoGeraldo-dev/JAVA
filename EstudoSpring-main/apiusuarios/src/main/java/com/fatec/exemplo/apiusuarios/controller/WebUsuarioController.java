@@ -16,7 +16,11 @@ import java.util.List;
 public class WebUsuarioController {
 
     @Autowired
+<<<<<<< HEAD:EstudoSpring-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebUsuarioController.java
     private UsuarioService usuarioservice;
+=======
+    private UsuarioService usuarioService;
+>>>>>>> 59ed8124a7d095b5c63d39c68e727d9b51ec510f:Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebUsuarioController.java
 
 
     @GetMapping("/novo")
@@ -27,11 +31,12 @@ public class WebUsuarioController {
 
     @PostMapping("/salvar")
     public String salvar(@ModelAttribute Usuario usuario) {
-        usuarioservice.salvar(usuario);
+        usuarioService.salvar(usuario);
         return "cadastro";
     }
 
     @GetMapping("/lista")
+<<<<<<< HEAD:EstudoSpring-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebUsuarioController.java
     public String listar(@RequestParam(required = false) String nome, Model model) {
         List<Usuario> usuarios = (nome == null || nome.isEmpty())
                 ? usuarioservice.listarTodos()
@@ -39,4 +44,17 @@ public class WebUsuarioController {
         model.addAttribute("usuarios", usuarios);
         return "lista";
     }
+=======
+    public  String Listar(@RequestParam(required = false) String nome, Model model) {
+        List<Usuario> usuarios = (nome == null || nome.isEmpty())
+                ? usuarioService.listarTodos()
+                : usuarioService.contendoPorNomeUsuario(nome);
+        model.addAttribute("usuarios", usuarios);
+        return "lista";
+            }
+
+
+
+
+>>>>>>> 59ed8124a7d095b5c63d39c68e727d9b51ec510f:Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebUsuarioController.java
 }
