@@ -1,14 +1,11 @@
 package com.fatec.exemplo.apiusuarios.controller;
 
-import com.fatec.exemplo.apiusuarios.model.Cliente;
 import com.fatec.exemplo.apiusuarios.model.Usuario;
-import com.fatec.exemplo.apiusuarios.service.Usuarioservice;
+import com.fatec.exemplo.apiusuarios.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -16,7 +13,7 @@ import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 public class UsuarioController {
 
     @Autowired
-    private Usuarioservice service;
+    private UsuarioService service;
 
     @GetMapping
     public List<Usuario> listar() {

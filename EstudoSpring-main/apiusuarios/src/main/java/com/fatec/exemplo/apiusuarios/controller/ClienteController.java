@@ -1,17 +1,14 @@
 package com.fatec.exemplo.apiusuarios.controller;
 
-
 import com.fatec.exemplo.apiusuarios.model.Cliente;
-import com.fatec.exemplo.apiusuarios.model.Usuario;
 import com.fatec.exemplo.apiusuarios.service.ClienteService;
-import com.fatec.exemplo.apiusuarios.service.Usuarioservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping("/clientes")
 public class ClienteController {
 
     @Autowired
@@ -19,8 +16,7 @@ public class ClienteController {
 
     @GetMapping
     public List<Cliente> listar() {
-        return service.ListarClientes();
-
+        return service.listarTodos();
     }
 
     @PostMapping
@@ -33,26 +29,23 @@ public class ClienteController {
         service.deletar(id);
     }
 
-
-    @GetMapping("/cliente/buscar")
+    @GetMapping("/buscar")
     public List<Cliente> buscarPorNome(@RequestParam String nome) {
-      return service.buscarPorNome(nome);
+        return service.buscarPorNome(nome);
     }
 
-    @GetMapping("/cliente/contendo")
-    public List<Cliente> buscarPorNomeClienteContendo(@RequestParam String nome) {
-        return service.contendoPorNomeCliente(nome);
+    @GetMapping("/contendo")
+    public List<Cliente> buscarContendo(@RequestParam String nome) {
+        return service.contendoPorNome(nome);
     }
 
-
-    @GetMapping("/cliente/greater")
+    @GetMapping("/greater")
     public List<Cliente> clienteGreater(@RequestParam Long codCliente) {
         return service.greater(codCliente);
     }
 
-    @GetMapping("/cliente/less")
-        public List<Cliente> clienteLess(@RequestParam Long codCliente) {
+    @GetMapping("/less")
+    public List<Cliente> clienteLess(@RequestParam Long codCliente) {
         return service.buscarPorLess(codCliente);
-        }
     }
-
+}

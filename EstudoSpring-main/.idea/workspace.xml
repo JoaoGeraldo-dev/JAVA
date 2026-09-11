@@ -4,50 +4,107 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77253b21-82b6-4ed4-b1b1-d12e370fd0ef" name="Changes" comment="" />
+    <list default="true" id="d0cedbbe-7bad-4a32-bc85-632d137c6e23" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/model/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/repository/ProdutoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/service/ProdutoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/Spring-Boot-Example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/ApiusuariosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/ClienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/UsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebClienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/controller/WebUsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/model/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/repository/ClienteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/repository/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/service/ClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/java/com/fatec/exemplo/apiusuarios/service/Usuarioservice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/resources/templates/cadastro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/resources/templates/cadastro_cliente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/main/resources/templates/lista.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Boot-Example-main/apiusuarios/src/test/java/com/fatec/exemplo/apiusuarios/ApiusuariosApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5,
+  "associatedIndex": 2,
   "fromUser": false
 }]]></component>
-  <component name="ProjectId" id="3J5yUXJL12KpRnzk77uKzApZDco" />
+  <component name="ProjectId" id="3JCFu2JNqSf960UDBuHw1xRYD74" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ApiusuariosApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/aluno/Documents/GitHub/JAVA/EstudoSpring-main"
+    "last_opened_file_path": "C:/Users/João Geraldo/Documents/GitHub/JAVA/EstudoSpring-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="77253b21-82b6-4ed4-b1b1-d12e370fd0ef" name="Changes" comment="" />
-      <created>1788965244750</created>
+      <changelist id="d0cedbbe-7bad-4a32-bc85-632d137c6e23" name="Changes" comment="" />
+      <created>1789157362324</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1788965244750</updated>
+      <updated>1789157362324</updated>
     </task>
     <servers />
   </component>

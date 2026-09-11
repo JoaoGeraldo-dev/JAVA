@@ -2,14 +2,13 @@ package com.fatec.exemplo.apiusuarios.controller;
 
 
 import com.fatec.exemplo.apiusuarios.model.Usuario;
-import com.fatec.exemplo.apiusuarios.service.Usuarioservice;
+import com.fatec.exemplo.apiusuarios.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("web/usuarios")
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WebUsuarioController {
 
     @Autowired
-    private Usuarioservice usuarioservice;
+    private UsuarioService usuarioservice;
 
 
     @GetMapping("/novo")
@@ -32,10 +31,12 @@ public class WebUsuarioController {
         return "cadastro";
     }
 
-    @GetMapping("/listar")
-    public  String Listar(Model model){
-        model.addAttribute("usuarios",
-                usuarioservice.listarTodos());
-               return "lista";
+    @GetMapping("/lista")
+    public String listar(@RequestParam(required = false) String nome, Model model) {
+        List<Usuario> usuarios = (nome == null || nome.isEmpty())
+                ? usuarioservice.listarTodos()
+                : usuarioservice.buscarPorNomeUsuario(nome);
+        model.addAttribute("usuarios", usuarios);
+        return "lista";
     }
 }

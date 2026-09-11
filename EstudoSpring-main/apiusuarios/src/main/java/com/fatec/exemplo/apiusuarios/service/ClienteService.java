@@ -18,7 +18,7 @@ public class ClienteService {
     private ClienteRepository repository;
 
 
-    public List<Cliente> ListarClientes(){
+    public List<Cliente> listarTodos(){
         return repository.findAll();
     }
 
@@ -34,7 +34,7 @@ public class ClienteService {
         return repository.findByNome(nome);
     }
 
-    public List<Cliente> contendoPorNomeCliente(String nome) {
+    public List<Cliente> contendoPorNome(String nome) {
         return repository.findByNomeContaining(nome);
 
     }

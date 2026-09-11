@@ -12,7 +12,7 @@ import java.util.List;
 
 
     @Service
-    public class Usuarioservice {
+    public class UsuarioService {
         @Autowired
         private UsuarioRepository repository;
 
@@ -40,6 +40,4 @@ import java.util.List;
             return repository.findByNomeContaining(nome);
         }
     }
-
-
 
