@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+<h1>Home</h1>
+
+<h2>Cadastros</h2>
+<ul>
+    <li><a th:href="@{/web/usuarios/novo}">Usuário</a></li>
+    <li><a th:href="@{/web/clientes/novo}">Cliente</a></li>
+    <li><a th:href="@{/web/produtos/novo}">Produto</a></li>
+</ul>
+
+<h2>Consultas</h2>
+<ul>
+    <li><a th:href="@{/web/usuarios/lista}">Usuário</a></li>
+    <li><a th:href="@{/web/clientes/lista}">Cliente</a></li>
+    <li><a th:href="@{/web/produtos/lista}">Produto</a></li>
+</ul>
+</body>
+</html>

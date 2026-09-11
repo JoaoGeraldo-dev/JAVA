@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+<h1>Lista de Clientes</h1>
+<form th:action="@{/web/clientes/lista}" method="get">
+    <input type="text" name="nome" placeholder="Buscar por nome">
+    <button type="submit">Buscar</button>
+</form>
+<p><a th:href="@{/web/clientes/lista}">Mostrar todos</a></p>
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Idade</th>
+        <th>RG</th>
+        <th>CPF</th>
+        <th>Data de Nascimento</th>
+    </tr>
+    <tr th:each="cliente : ${clientes}">
+        <td th:text="${cliente.nome}"></td>
+        <td th:text="${cliente.email}"></td>
+        <td th:text="${cliente.telefone}"></td>
+        <td th:text="${cliente.idade}"></td>
+        <td th:text="${cliente.rg}"></td>
+        <td th:text="${cliente.cpf}"></td>
+        <td th:text="${#dates.format(cliente.data_Nascimento, 'dd/MM/yyyy')}"></td>
+    </tr>
+</table>
+<p><a th:href="@{/web/clientes/novo}">Cadastrar cliente</a></p>
+<p><a th:href="@{/home}">Voltar para a Home</a></p>
+</body>
+</html>
