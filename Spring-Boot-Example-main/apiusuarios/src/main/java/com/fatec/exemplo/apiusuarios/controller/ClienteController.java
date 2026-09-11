@@ -2,9 +2,7 @@ package com.fatec.exemplo.apiusuarios.controller;
 
 
 import com.fatec.exemplo.apiusuarios.model.Cliente;
-import com.fatec.exemplo.apiusuarios.model.Usuario;
 import com.fatec.exemplo.apiusuarios.service.ClienteService;
-import com.fatec.exemplo.apiusuarios.service.Usuarioservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
