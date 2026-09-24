@@ -23,5 +23,8 @@ VeiculoRepository repository;
         return repository.findAll();
     }
 
+    public void excluirVeiculo(Long id){
+        repository.deleteById(id);
+    }
 
 }

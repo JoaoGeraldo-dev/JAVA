@@ -4,5 +4,7 @@ import com.joao.estacionamento.model.Veiculo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VeiculoRepository extends JpaRepository<Veiculo, Long> {
+    Long id(long id);
+
 
 }

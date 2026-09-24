@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Veículos cadastrados</title>
+</head>
+<body>
+
+<h1>Veículos cadastrados</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Placa</th>
+        <th>Modelo</th>
+        <th>Tipo</th>
+        <th>Ação</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="veiculo : ${veiculos}">
+        <td th:text="${veiculo.id}"></td>
+        <td th:text="${veiculo.placa}"></td>
+        <td th:text="${veiculo.modelo}"></td>
+        <td th:text="${veiculo.tipo}"></td>
+
+        <td>
+            <a th:href="@{/excluir/{id}(id=${veiculo.id})}">
+                Excluir
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+
+<a href="/cadastro">Cadastrar outro veículo</a>
+
+</body>
+</html>
